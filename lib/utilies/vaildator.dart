@@ -3,7 +3,10 @@ import 'package:get/get.dart';
 
 class Utils {
   static void fieldFocusChange(
-      BuildContext context, FocusNode current, FocusNode nextFocus) {
+    BuildContext context,
+    FocusNode current,
+    FocusNode nextFocus,
+  ) {
     current.unfocus();
     FocusScope.of(context).nextFocus();
   }
@@ -12,10 +15,7 @@ class Utils {
     //  Fluttertoast.showToast(msg: message, backgroundColor: Colors.black26);
   }
 
-  static snakBar(
-      String title,
-      String message,
-      ) {
+  static snakBar(String title, String message) {
     Get.snackbar(title, message, backgroundColor: Colors.white);
   }
 
@@ -53,10 +53,11 @@ class Utils {
     if (password.length < 8) {
       return '⚠️ Password must be at least 8 characters long';
     }
-    final RegExp passwordRegex =
-    RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
+    final RegExp passwordRegex = RegExp(
+      r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$',
+    );
     if (!passwordRegex.hasMatch(password)) {
-      return '⚠️ Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and be at least 8 characters long';
+      return "⚠️ Password must contain at least one number, one upper \n        and lower and special character";
     }
     return null;
   }
@@ -81,8 +82,9 @@ getCircle(Color valueColor) {
     child: CircularProgressIndicator.adaptive(
       backgroundColor: valueColor, // Background color (optional)
       strokeWidth: 4.0, // Adjust the thickness of the indicator
-      valueColor:
-      AlwaysStoppedAnimation<Color>(Colors.white), // Set color to white
+      valueColor: AlwaysStoppedAnimation<Color>(
+        Colors.white,
+      ), // Set color to white
     ),
   );
 }

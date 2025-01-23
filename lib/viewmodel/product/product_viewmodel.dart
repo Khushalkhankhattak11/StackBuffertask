@@ -43,8 +43,8 @@ class ProductController extends GetxController {
         description: "Product 4 is designed with the modern user in mind. Its innovative features, combined with superior build quality, make it a standout in its category. Enjoy seamless performance and style in one compact package.",
       ),
       Product(
-        name: "Shoes",
-        image: ImagesUrls.s3,
+        name: "Ring",
+        image: 'assets/images/r.png',
         price: 39.99,
         description: "Take your experience to the next level with Product 5. This product boasts exceptional features such as high durability, advanced functionality, and a user-friendly design. It is crafted to deliver a premium experience at a competitive price.",
       ),

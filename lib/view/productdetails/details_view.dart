@@ -41,11 +41,9 @@ class ProductDetailScreen extends StatelessWidget {
               try {
                 // Initialize payment sheet for the specific product
                 await StripeService.initPaymentSheet(
-                  amount:
-                      product.price.toString(), 
-                  currency:
-                      "usd", 
-                  merchantDisplayName: "My Store", 
+                  amount: product.price.toString(),
+                  currency: "usd",
+                  merchantDisplayName: "My Store",
                 );
                 // Show payment sheet
                 await StripeService.presentPaymentSheet(context);
@@ -66,24 +64,26 @@ class ProductDetailScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.sp),
         child: SingleChildScrollView(
-          child:Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset(
-                product.image,
-                fit: BoxFit.cover,
-                width: double.infinity,
-                height: 300.h,
-              ),
+              Image.asset(product.image, width: double.infinity, height: 300.h),
               SizedBox(height: 16.h),
-              CustomtextComponents(title: product.name, size: 24.sp,weight: FontWeight.bold),
+              CustomtextComponents(
+                title: product.name,
+                size: 24.sp,
+                weight: FontWeight.bold,
+              ),
 
               SizedBox(height: 8.h),
-              CustomtextComponents(title:  "\$${product.price.toStringAsFixed(2)}", size: 20.sp.sp,
-                  color: AppColor.greenColor,
-                  weight: FontWeight.bold,),
+              CustomtextComponents(
+                title: "\$${product.price.toStringAsFixed(2)}",
+                size: 20.sp.sp,
+                color: AppColor.greenColor,
+                weight: FontWeight.bold,
+              ),
               SizedBox(height: 13.h),
               Text(
                 product.description,
@@ -91,7 +91,7 @@ class ProductDetailScreen extends StatelessWidget {
               ),
             ],
           ),
-        )
+        ),
       ),
     );
   }

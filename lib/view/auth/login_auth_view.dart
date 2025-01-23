@@ -51,23 +51,24 @@ class LoginAuthView extends StatelessWidget {
                             return 'Email cannot be empty';
                           }
                           return Utils.validateEmail(value);
+
                         },
                       ),
                       SizedBox(height: 18.h),
                       CustomFieldComponents(
                         keyboardType: TextInputType.text,
                         controller:
-                            _authController.loginPasswordController.value,
-                        obscureText: true,
-                        prefixIcon: Icons.password,
-                        hint: 'Password',
+                        _authController.loginPasswordController.value,
+                        prefixIcon: Icons.lock,
+                        hint: 'Khan1234@',
                         validator: (value) {
                           if (value!.isEmpty) {
-                            return 'Password cannot be empty';
+                            return 'Password is required';
                           }
                           return Utils.validatePassword(value);
                         },
                       ),
+
                     ],
                   ),
                 ),
@@ -96,8 +97,8 @@ class LoginAuthView extends StatelessWidget {
                           // Redirect to Home after successful login
                           if (_authController.user.value != null) {
                             Get.offAllNamed(
-                              '/home',
-                            ); // Replace with your home route
+                                '/home_view',
+                            );
                           }
                         } catch (e) {
                           // Handle login errors (already handled in AuthController)

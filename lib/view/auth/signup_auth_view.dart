@@ -79,7 +79,7 @@ class SignupAuthView extends StatelessWidget {
                         controller:
                             _authController.signupPasswordController.value,
                         prefixIcon: Icons.lock,
-                        hint: 'Password',
+                        hint: 'Khan1234@',
                         validator: (value) {
                           if (value!.isEmpty) {
                             return 'Password is required';

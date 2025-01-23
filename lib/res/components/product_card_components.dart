@@ -4,7 +4,8 @@ import 'package:get/get.dart';
 import 'package:taskcommerceapp/model/product_model.dart';
 import 'package:taskcommerceapp/res/color/appcolor.dart';
 import 'package:taskcommerceapp/res/components/customtext_components.dart';
-import 'package:taskcommerceapp/view/details/details_view.dart';
+import 'package:taskcommerceapp/view/productdetails/details_view.dart';
+
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -20,43 +21,48 @@ class ProductCard extends StatelessWidget {
       },
       child: Card(
         elevation: 4,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.r)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.r),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10.h),
               child: Image.asset(
                 product.image,
                 fit: BoxFit.cover,
-                width: double.infinity,
+                height: 120.h,
+                width: 190.w,
               ),
             ),
+            SizedBox(height: 1.h),
             Padding(
-              padding: EdgeInsets.all(8.sp),
+              padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 0.h),
               child: CustomtextComponents(
                 title: product.name,
-                size: 16.sp,
+                size: 14.sp,
                 weight: FontWeight.bold,
               ),
             ),
+
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8.w),
+              padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 0.h),
               child: CustomtextComponents(
                 title: "\$${product.price.toStringAsFixed(2)}",
                 color: AppColor.primaryColor,
-                weight: FontWeight.bold,
-                size: 14.sp,
+                size: 11.sp,
               ),
             ),
+
             Padding(
-              padding:  EdgeInsets.all(8.sp),
+              padding: EdgeInsets.symmetric(horizontal: 10.w,vertical: 0.h),
               child: CustomtextComponents(
                 title: product.description,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-
                 color: AppColor.greyColor,
-                size: 12.sp,
+                size: 11.sp,
               ),
             ),
           ],

@@ -88,7 +88,7 @@ class AuthController extends GetxController {
         title: "Success",
         message: "Login successful!",
       );
-      Get.offNamed(RouteName.home);
+
 
       // Clear login form
       loginEmailController.value.clear();
