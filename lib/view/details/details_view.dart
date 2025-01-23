@@ -83,10 +83,8 @@ class ProductDetailScreen extends StatelessWidget {
               SizedBox(height: 8.h),
               CustomtextComponents(title:  "\$${product.price.toStringAsFixed(2)}", size: 20.sp.sp,
                   color: AppColor.greenColor,
-                  weight: FontWeight.bold),
-
+                  weight: FontWeight.bold,),
               SizedBox(height: 13.h),
-
               Text(
                 product.description,
                 style: TextStyle(fontSize: 16.sp, letterSpacing: 1),
