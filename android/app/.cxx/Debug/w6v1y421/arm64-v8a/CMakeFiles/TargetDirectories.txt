@@ -1,0 +1,2 @@
+D:/firebase projects/taskcommerceapp/android/app/.cxx/Debug/w6v1y421/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/firebase projects/taskcommerceapp/android/app/.cxx/Debug/w6v1y421/arm64-v8a/CMakeFiles/rebuild_cache.dir

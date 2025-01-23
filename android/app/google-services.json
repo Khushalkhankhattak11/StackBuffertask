@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "187200390585",
+    "project_id": "khushalcommerceapp",
+    "storage_bucket": "khushalcommerceapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187200390585:android:27348995c0a1f8c6f36268",
+        "android_client_info": {
+          "package_name": "com.example.taskcommerceapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAw0ZGYUqwqg1EFGJHcSEXFy_55bq1TSI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
